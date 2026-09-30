@@ -1,5 +1,5 @@
 import { defineConfig, devices } from '@playwright/test';
-import { defineBddConfig } from 'playwright-bdd';
+import { defineBddConfig, cucumberReporter } from 'playwright-bdd';
 
 const testDir = defineBddConfig({
   features: 'tests/features/*.feature',
@@ -9,7 +9,13 @@ const testDir = defineBddConfig({
 export default defineConfig({
   testDir,
   fullyParallel: true,
-  reporter: [['list'], ['html', { open: 'never' }]],
+  reporter: [
+    ['list'],
+    ['html', { open: 'never' }],
+    ['allure-playwright', { resultsDir: 'allure-results' }],
+    // Living doc: de Nederlandse features met per stap groen/rood
+    cucumberReporter('html', { outputFile: 'living-doc/index.html' }),
+  ],
   use: {
     baseURL: 'http://localhost:4173',
     trace: 'on-first-retry',

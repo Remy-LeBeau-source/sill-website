@@ -3,14 +3,31 @@
   "private": true,
   "scripts": {
     "db:setup": "node scripts/db-setup.mjs",
-    "pretest": "npm run db:setup",
+    "pretest": "npm run db:setup && npm run allure:clean",
     "test": "bddgen && playwright test",
-    "test:ui": "bddgen && playwright test --ui",
-    "test:headed": "bddgen && playwright test --headed",
-    "report": "playwright show-report"
+    "test:desktop": "npm test -- --project=desktop",
+    "test:desktop:headed": "npm test -- --project=desktop --headed --workers=1",
+    "test:desktop:ui": "npm run test:ui -- --project=desktop",
+    "test:mobiel": "npm test -- --project=mobiel",
+    "test:mobiel:headed": "npm test -- --project=mobiel --headed --workers=1",
+    "test:mobiel:ui": "npm run test:ui -- --project=mobiel",
+    "test:ui": "npm run db:setup && bddgen && playwright test --ui",
+    "test:headed": "npm test -- --headed",
+    "report": "playwright show-report",
+    "bekijk": "node --no-deprecation scripts/bekijk.mjs",
+    "bekijk:mobiel": "node --no-deprecation scripts/bekijk.mjs \"Pixel 7\"",
+    "bekijk:laptop": "node --no-deprecation scripts/bekijk.mjs",
+    "allure:clean": "node -e \"require('fs').rmSync('allure-results', { recursive: true, force: true })\"",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report",
+    "allure:serve": "allure serve allure-results",
+    "livingdoc": "http-server living-doc -p 4175 -c-1 -o",
+    "docs:refresh": "node scripts/docs-refresh.mjs"
   },
   "devDependencies": {
     "@playwright/test": "^1.63.0",
+    "allure-commandline": "^2.34.1",
+    "allure-playwright": "^3.4.3",
     "http-server": "^14.1.1",
     "playwright-bdd": "^9.2.1"
   }

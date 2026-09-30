@@ -3,3 +3,6 @@ node_modules/
 test-results/
 playwright-report/
 tests/data/*.db
+allure-results/
+allure-report/
+living-doc/

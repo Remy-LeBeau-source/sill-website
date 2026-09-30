@@ -10,12 +10,22 @@ de step definitions in TypeScript in `tests/steps/`.
 npm install                    # eenmalig
 npx playwright install chromium # eenmalig
 npm test                       # alle tests, desktop + mobiel
+npm run test:desktop           # alleen desktop
+npm run test:mobiel            # alleen mobiel
 npm run test:ui                # interactieve Playwright UI
+npm run test:mobiel:ui         # Playwright UI, alleen mobiel (ook: test:desktop:ui)
 npm run test:headed            # met zichtbare browser
+npm run test:mobiel:headed     # mobiel met zichtbare browser (ook: test:desktop:headed)
 npm run report                 # HTML-rapport van de laatste run
+npm run docs:refresh           # tests + Allure-rapport bouwen
+npm run allure:open            # Allure-rapport openen
+npm run livingdoc              # living doc openen
 ```
 
 `npm test` start zelf een lokale webserver op poort 4173 (`http-server`).
+
+Alle commando's (filteren op tag of scenario, headless/headed, traces, codegen, Allure, living doc)
+staan in [PLAYWRIGHT-COMMANDOS.md](PLAYWRIGHT-COMMANDOS.md).
 
 ## Projecten en tags
 
