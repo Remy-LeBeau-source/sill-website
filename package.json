@@ -1,0 +1,17 @@
+{
+  "name": "sill-website",
+  "private": true,
+  "scripts": {
+    "db:setup": "node scripts/db-setup.mjs",
+    "pretest": "npm run db:setup",
+    "test": "bddgen && playwright test",
+    "test:ui": "bddgen && playwright test --ui",
+    "test:headed": "bddgen && playwright test --headed",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.63.0",
+    "http-server": "^14.1.1",
+    "playwright-bdd": "^9.2.1"
+  }
+}

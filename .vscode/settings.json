@@ -1,0 +1,19 @@
+{
+  "cucumber.features": ["tests/features/**/*.feature"],
+  "cucumber.glue": ["tests/steps/**/*.ts"],
+  "[cucumber]": {
+    "editor.defaultFormatter": "CucumberOpen.cucumber-official",
+    "editor.formatOnSave": true
+  },
+  "files.exclude": {
+    ".features-gen": true
+  },
+  "sqltools.connections": [
+    {
+      "name": "Sill-vyan testdata",
+      "driver": "SQLite",
+      "database": "${workspaceFolder}/tests/data/testdata.db"
+    }
+  ],
+  "sqltools.useNodeRuntime": true
+}

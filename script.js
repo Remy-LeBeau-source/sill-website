@@ -55,12 +55,15 @@ counters.forEach(c => countIO.observe(c));
 document.getElementById('year').textContent = new Date().getFullYear();
 
 // Contactformulier: opent e-mailprogramma (vervang later door echte backend, bv. Formspree)
+// openMail staat op window zodat tests hem kunnen vervangen
+window.openMail = window.openMail || (url => { window.location.href = url; });
+
 function handleSubmit(e) {
   e.preventDefault();
   const f = e.target;
   const subject = encodeURIComponent(`Kennismaking aanvraag — ${f.naam.value}`);
   const body = encodeURIComponent(`Naam: ${f.naam.value}\nE-mail: ${f.email.value}\n\n${f.bericht.value}`);
-  window.location.href = `mailto:info@sill-vyan.nl?subject=${subject}&body=${body}`;
+  window.openMail(`mailto:info@sill-vyan.nl?subject=${subject}&body=${body}`);
   f.querySelector('.form-note').hidden = false;
   return false;
 }
