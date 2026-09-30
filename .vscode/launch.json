@@ -1,0 +1,19 @@
+{
+  // F5 in VS Code opent de website in Edge (in plaats van te vragen om een Markdown-extensie).
+  // Kies bovenaan in "Uitvoeren en fouten opsporen" een andere regel om iets anders te openen.
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Voetbalwebsite (live)",
+      "type": "msedge",
+      "request": "launch",
+      "url": "https://remy-lebeau-source.github.io/voetbal-website/"
+    },
+    {
+      "name": "Sill-vyan website (live)",
+      "type": "msedge",
+      "request": "launch",
+      "url": "https://remy-lebeau-source.github.io/sill-website/"
+    }
+  ]
+}
