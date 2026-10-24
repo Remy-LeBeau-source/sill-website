@@ -16,6 +16,6 @@ INSERT INTO navigatie_testdata (link, sectie) VALUES
 INSERT INTO faq_testdata (vraag, antwoord_fragment) VALUES
   ('Hoe snel kan mijn website live?',                    'binnen 2 tot 3 weken'),
   ('Wat kost een website of automatisering?',            'vaste prijs'),
-  ('Ben ik na oplevering afhankelijk van Sill-vyan?',    'overdraagbaar'),
+  ('Ben ik na oplevering afhankelijk van Groeipad?',    'overdraagbaar'),
   ('Werk je alleen aan AI-projecten?',                   'alleen een website'),
   ('Moet ik zelf technische kennis hebben?',             'begrijpelijke taal');

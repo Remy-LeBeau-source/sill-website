@@ -10,10 +10,10 @@
       "url": "https://remy-lebeau-source.github.io/voetbal-website/"
     },
     {
-      "name": "Sill-vyan website (live)",
+      "name": "Groeipad website (live)",
       "type": "msedge",
       "request": "launch",
-      "url": "https://remy-lebeau-source.github.io/sill-website/"
+      "url": "https://remy-lebeau-source.github.io/groeipad-website/"
     }
   ]
 }

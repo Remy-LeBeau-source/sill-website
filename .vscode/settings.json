@@ -10,7 +10,7 @@
   },
   "sqltools.connections": [
     {
-      "name": "Sill-vyan testdata",
+      "name": "Groeipad testdata",
       "driver": "SQLite",
       "database": "${workspaceFolder}/tests/data/testdata.db"
     }

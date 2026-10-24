@@ -1,10 +1,10 @@
-# Playwright-commando's — website Sill-vyan
+# Playwright-commando's — website Groeipad
 
 Alle commando's om de tests te draaien, te filteren en de rapporten te bekijken.
 Typ ze in **CMD** (Opdrachtprompt) of in de terminal van VS Code, altijd vanuit de projectmap:
 
 ```cmd
-cd C:\sill-website
+cd C:\groeipad-website
 ```
 
 Zie [README.md](README.md) voor wat de tests controleren en hoe de testdata werkt.

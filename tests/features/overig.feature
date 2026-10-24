@@ -5,7 +5,7 @@ Functionaliteit: Pakketten, footer en pagina-info
     Gegeven ik open de homepage
 
   Scenario: Pagina heeft de juiste titel
-    Dan heeft de pagina de titel "Sill-vyan — Websites, AI-automatisering & digitale groei"
+    Dan heeft de pagina de titel "Groeipad — Websites, AI-automatisering & digitale groei"
 
   Scenario: Drie pakketten, waarvan één uitgelicht
     Dan zie ik 3 pakketten

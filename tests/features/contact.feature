@@ -26,7 +26,7 @@ Functionaliteit: Contactformulier
     En ik "jan@voorbeeld.nl" invul bij "E-mail"
     En ik "Ik wil een website" invul bij "Waar kan ik je mee helpen?"
     En ik het formulier verstuur
-    Dan wordt er een mail geopend naar "info@sill-vyan.nl"
+    Dan wordt er een mail geopend naar "info@pathconsultancy.nl"
     En heeft de mail het onderwerp "Kennismaking aanvraag — Jan Jansen"
     En bevat de mailtekst "jan@voorbeeld.nl"
     En bevat de mailtekst "Ik wil een website"

@@ -4,7 +4,7 @@ import { When, Then } from './fixtures';
 
 const heroFoto = '.hero-card .portrait img';
 
-Then('is de foto van Sill-vyan geladen', async ({ page }) => {
+Then('is de illustratie geladen', async ({ page }) => {
   const foto = page.locator(heroFoto);
   await expect(foto).toBeVisible();
   await expect
@@ -12,7 +12,7 @@ Then('is de foto van Sill-vyan geladen', async ({ page }) => {
     .toBeGreaterThan(0);
 });
 
-Then('vult de foto de kaart zonder uitgerekt te worden', async ({ page }) => {
+Then('vult de illustratie de kaart zonder uitgerekt te worden', async ({ page }) => {
   const foto = page.locator(heroFoto);
   const kaart = await page.locator('.hero-card .portrait').boundingBox();
   const img = await foto.boundingBox();

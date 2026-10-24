@@ -1,4 +1,4 @@
--- Testdata voor de Playwright-tests van de Sill-vyan-site.
+-- Testdata voor de Playwright-tests van de Groeipad-site.
 -- Wordt opgebouwd met: npm run db:setup  (maakt tests/data/testdata.db)
 
 DROP TABLE IF EXISTS contact_testdata;
