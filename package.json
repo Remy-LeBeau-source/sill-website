@@ -1,5 +1,5 @@
 {
-  "name": "sill-website",
+  "name": "groeipad-website",
   "private": true,
   "scripts": {
     "db:setup": "node scripts/db-setup.mjs",

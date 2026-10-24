@@ -1,4 +1,4 @@
-# Tests — website Sill-vyan
+# Tests — website Groeipad
 
 End-to-end tests met [Playwright](https://playwright.dev) en [playwright-bdd](https://vitalets.github.io/playwright-bdd/).
 De testcases staan als Gherkin-scenario's in het Nederlands (`# language: nl`) in `tests/features/`,
@@ -67,7 +67,7 @@ Scenario's met de tag `@database` halen hun testdata uit `tests/data/testdata.db
 Het `.db`-bestand wordt gegenereerd en staat niet in git.
 
 **Bekijken in VS Code:** open SQLTools (het database-icoon links) en kies de verbinding
-**Sill-vyan testdata**. De eerste keer vraagt SQLTools of het de SQLite-driver mag installeren;
+**Groeipad testdata**. De eerste keer vraagt SQLTools of het de SQLite-driver mag installeren;
 klik op **Install**.
 
 Nieuwe testdata toevoegen: zet een rij in `seed.sql`, bijvoorbeeld een nieuwe `contact_testdata`-rij,

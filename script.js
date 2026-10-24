@@ -63,7 +63,7 @@ function handleSubmit(e) {
   const f = e.target;
   const subject = encodeURIComponent(`Kennismaking aanvraag — ${f.naam.value}`);
   const body = encodeURIComponent(`Naam: ${f.naam.value}\nE-mail: ${f.email.value}\n\n${f.bericht.value}`);
-  window.openMail(`mailto:info@sill-vyan.nl?subject=${subject}&body=${body}`);
+  window.openMail(`mailto:info@pathconsultancy.nl?subject=${subject}&body=${body}`);
   f.querySelector('.form-note').hidden = false;
   return false;
 }

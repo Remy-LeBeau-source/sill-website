@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 886 1107" width="886" height="1107" role="img" aria-labelledby="pw-titel pw-uitleg">
+  <title id="pw-titel">Pathweaver</title>
+  <desc id="pw-uitleg">Vijf draden worden samengeweven en lopen door drie poorten naar één pad met een eindpunt.</desc>
+  <style>
+    :root { color-scheme: light dark; }
+    .vlak  { fill: #ffffff; }
+    .paneel{ fill: #f8fafc; }
+    .lijn  { stroke: #e2e8f0; }
+    .draad { stroke: #cbd5e1; }
+    .spil  { stroke: #4f46e5; }
+    .poort { fill: #f1f5f9; stroke: #e2e8f0; }
+    .kap   { fill: #4f46e5; }
+    .punt  { fill: #4f46e5; }
+    .ring  { stroke: #4f46e5; }
+    .merk  { fill: #475569; }
+    .gloed { stop-color: #4f46e5; }
+    @media (prefers-color-scheme: dark) {
+      .vlak  { fill: #111a2e; }
+      .paneel{ fill: #0e1627; }
+      .lijn  { stroke: #1e293b; }
+      .draad { stroke: #334155; }
+      .spil  { stroke: #818cf8; }
+      .poort { fill: #0b1220; stroke: #1e293b; }
+      .kap   { fill: #818cf8; }
+      .punt  { fill: #818cf8; }
+      .ring  { stroke: #818cf8; }
+      .merk  { fill: #aab6c8; }
+      .gloed { stop-color: #818cf8; }
+    }
+  </style>
+
+  <defs>
+    <radialGradient id="pw-gloed" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   class="gloed" stop-opacity=".28" />
+      <stop offset="60%"  class="gloed" stop-opacity=".07" />
+      <stop offset="100%" class="gloed" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="pw-spil" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   class="gloed" stop-opacity=".45" />
+      <stop offset="45%"  class="gloed" stop-opacity=".85" />
+      <stop offset="100%" class="gloed" stop-opacity="1" />
+    </linearGradient>
+  </defs>
+
+  <!-- vlak -->
+  <rect width="886" height="1107" rx="28" class="vlak" />
+  <rect x="1" y="1" width="884" height="1105" rx="27" class="paneel" />
+  <rect x="1.5" y="1.5" width="883" height="1104" rx="26.5" fill="none" class="lijn" stroke-width="3" />
+
+  <!-- gloed op het punt waar alles samenkomt -->
+  <circle cx="443" cy="905" r="300" fill="url(#pw-gloed)" />
+
+  <!-- de draden: vijf wensen die elkaar kruisen en samenkomen in één pad -->
+  <g fill="none" stroke-width="7" stroke-linecap="round" class="draad">
+    <path d="M143,112 C143,330 560,420 540,560 C520,700 443,800 443,905" opacity=".9" />
+    <path d="M743,112 C743,330 326,420 346,560 C366,700 443,800 443,905" opacity=".9" />
+    <path d="M290,112 C290,340 470,440 460,560 C452,700 443,820 443,905" opacity=".6" />
+    <path d="M596,112 C596,340 416,440 426,560 C434,700 443,820 443,905" opacity=".6" />
+  </g>
+
+  <!-- de spil: de wens die door de hele keten loopt -->
+  <path d="M443,112 C443,400 443,700 443,905" fill="none" stroke="url(#pw-spil)" stroke-width="9" stroke-linecap="round" />
+
+  <!-- drie poorten, elk smaller dan de vorige: elke controle laat minder door -->
+  <g stroke-width="3">
+    <g class="poort">
+      <rect x="90"  y="286" width="706" height="30" rx="15" />
+      <rect x="150" y="456" width="586" height="30" rx="15" />
+      <rect x="230" y="626" width="426" height="30" rx="15" />
+    </g>
+    <g class="kap" stroke="none">
+      <rect x="90"  y="286" width="88" height="30" rx="15" opacity=".9" />
+      <rect x="150" y="456" width="74" height="30" rx="15" opacity=".9" />
+      <rect x="230" y="626" width="60" height="30" rx="15" opacity=".9" />
+    </g>
+  </g>
+
+  <!-- de draden komen boven de poorten uit waar ze eroverheen weven -->
+  <g fill="none" stroke-width="7" stroke-linecap="round" class="draad">
+    <path d="M297,286 C305,296 312,306 318,316" opacity=".9" />
+    <path d="M590,456 C584,466 578,476 574,486" opacity=".6" />
+    <path d="M389,626 C391,636 393,646 394,656" opacity=".9" />
+  </g>
+  <path d="M443,286 L443,316" fill="none" class="spil" stroke-width="9" stroke-linecap="round" />
+  <path d="M443,626 L443,656" fill="none" class="spil" stroke-width="9" stroke-linecap="round" />
+
+  <!-- het eindpunt: pas na goedkeuring -->
+  <circle cx="443" cy="905" r="40" fill="none" class="ring" stroke-width="4" opacity=".45" />
+  <circle cx="443" cy="905" r="19" class="punt" />
+
+  <!-- wordmerk -->
+  <text x="443" y="1022" text-anchor="middle" class="merk"
+        font-family="system-ui, -apple-system, Segoe UI, Roboto, sans-serif"
+        font-size="30" font-weight="600" letter-spacing="7">PATHWEAVER</text>
+</svg>
